@@ -21,7 +21,3 @@ X_test = pd.read_csv(X_test_path)
 X_test_scaled = pd.DataFrame(scale.transform(X_test), columns=X_test.columns)
 X_test_scaled_path = os.path.join(PROCESSED_DATA_PATH, 'X_test_scaled.csv')
 X_test_scaled.to_csv(X_test_scaled_path, index=False)
-
-# déplace y_train et y_test dans le dossier processed
-y_train = pd.read_csv(os.path.join(PREPROCESSED_DATA_PATH, 'y_train.csv')).to_csv(os.path.join(PROCESSED_DATA_PATH, 'y_train.csv'), index=False)
-y_test = pd.read_csv(os.path.join(PREPROCESSED_DATA_PATH, 'y_test.csv')).to_csv(os.path.join(PROCESSED_DATA_PATH, 'y_test.csv'), index=False)

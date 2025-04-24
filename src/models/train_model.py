@@ -6,7 +6,7 @@ import numpy as np
 
 print(joblib.__version__)
 
-X_train = pd.read_csv('data/preprocessed/X_train.csv')
+X_train = pd.read_csv('data/processed/X_train_scaled.csv')
 y_train = pd.read_csv('data/preprocessed/y_train.csv')
 y_train = np.ravel(y_train)
 

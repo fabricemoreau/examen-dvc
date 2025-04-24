@@ -7,9 +7,10 @@ import numpy as np
 print(joblib.__version__)
 
 PROCESSED_DATA_PATH = "data/processed"
+PREPROCESSED_DATA_PATH = "data/preprocessed"
 
 X_train = pd.read_csv(PROCESSED_DATA_PATH + '/X_train_scaled.csv')
-y_train = pd.read_csv(PROCESSED_DATA_PATH + '/y_train.csv')
+y_train = pd.read_csv(PREPROCESSED_DATA_PATH + '/y_train.csv')
 y_train = np.ravel(y_train)
 
 param_rf = {
