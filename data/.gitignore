@@ -3,5 +3,7 @@
 /gbrt_model.pkl
 /prediction.csv
 /raw
+/preprocessed
 /processed
 /predictions
+/__pycache__

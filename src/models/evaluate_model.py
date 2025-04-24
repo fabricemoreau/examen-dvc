@@ -1,4 +1,4 @@
-
+import os
 import pandas as pd 
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
@@ -21,6 +21,8 @@ y_train_pred = rf_classifier.predict(X_train)
 y_test_pred = rf_classifier.predict(X_test)
 
 # save predictions
+if os.path.exists('data/predictions') == False:
+    os.makedirs('data/predictions')
 pd.DataFrame(y_train_pred, columns=['predictions']).to_csv('data/predictions/y_train_pred.csv', index=False)
 pd.DataFrame(y_test_pred, columns=['predictions']).to_csv('data/predictions/y_test_pred.csv', index=False)
 
