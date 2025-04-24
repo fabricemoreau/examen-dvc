@@ -3,8 +3,8 @@ from check_structure import check_existing_file
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-RAW_DATA_PATH = "data/raw_data/raw.csv"
-PROCESSED_DATA_PATH = "data/processed_data"
+RAW_DATA_PATH = "data/raw/raw.csv"
+PROCESSED_DATA_PATH = "data/processed"
 
 df = pd.read_csv(RAW_DATA_PATH, parse_dates=['date'])
 # on considère que l'horaire et les saisons n'ont pas d'impact sur le processus de fabrication, on supprime la colonne date
