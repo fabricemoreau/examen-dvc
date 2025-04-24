@@ -65,6 +65,7 @@ idna==3.10
 iterative-telemetry==0.0.10
 jmespath==1.0.1
 kombu==5.5.3
+logging==0.4.9.6
 lxml==5.4.0
 markdown-it-py==3.0.0
 marshmallow==3.26.1
