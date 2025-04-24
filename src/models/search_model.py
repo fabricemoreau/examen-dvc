@@ -9,11 +9,8 @@ print(joblib.__version__)
 PROCESSED_DATA_PATH = "data/processed"
 
 X_train = pd.read_csv(PROCESSED_DATA_PATH + '/X_train_scaled.csv')
-X_test = pd.read_csv(PROCESSED_DATA_PATH + '/X_test_scaled.csv')
 y_train = pd.read_csv(PROCESSED_DATA_PATH + '/y_train.csv')
-y_test = pd.read_csv(PROCESSED_DATA_PATH + '/y_test.csv')
 y_train = np.ravel(y_train)
-y_test = np.ravel(y_test)
 
 param_rf = {
     'n_estimators': [50, 100, 200, 400], 
@@ -31,4 +28,4 @@ grid_search.fit(X_train, y_train)
 #--Save the trained model to a file
 model_filename = './models/best_model.pkl'
 joblib.dump(grid_search.best_estimator_, model_filename)
-print("Model trained and saved successfully.")
+print("Best model found and saved successfully.")
